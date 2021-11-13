@@ -1,0 +1,23 @@
+services:
+  bot:
+    build: ./dogshark
+    restart: always
+    container_name: dogshark-bot
+    ports:
+      - "666:9999"
+
+  cq-http:
+    image: silicer/go-cqhttp:latest
+    restart: always
+    container_name: cq-http
+    depends_on:
+      - bot
+    ports:
+      - "777:9999"
+    volumes:
+      - ./configs/go-cqhttp.yml:/data/config.yml:ro
+      - ./configs/device.json:/data/device.json
+      - ./data/go-cqhttp/data:/data/data
+      - ./data/go-cqhttp/logs:/data/logs
+    
+
