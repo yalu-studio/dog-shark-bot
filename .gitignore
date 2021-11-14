@@ -1,8 +1,5 @@
 .venv
 __pycache__
 
-# Sensitive config
-configs/go-cqhttp.yml
-
 # Logs
 data

@@ -19,5 +19,6 @@ services:
       - ./configs/device.json:/data/device.json
       - ./data/go-cqhttp/data:/data/data
       - ./data/go-cqhttp/logs:/data/logs
+      - ./dogshark/images:/images
     
 

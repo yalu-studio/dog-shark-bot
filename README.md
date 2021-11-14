@@ -6,9 +6,11 @@
 
 ## 感谢
 
-* [go-cqhttp](https://github.com/Mrs4s/go-cqhttp)
+* [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) | 
+    [doc](https://docs.go-cqhttp.org/)
 
-* [NoneBot2](https://github.com/nonebot/nonebot2)
+* [NoneBot2](https://github.com/nonebot/nonebot2) | 
+    [doc](https://v2.nonebot.dev/)
 
 
 ## 使用说明
@@ -32,12 +34,12 @@
     ```bash
     docker-compose up -d
 
-    # 不过上面太长了，我一般都用这个
+    # 但上面的命令太长了，懒人（比如我）一般都用下面这个
     ./deploy.sh
     ```
 
 ## 参与贡献
 
-欢迎 issue、PR、fork，以及在群内监督 Yalu 黑工。
+欢迎 issue、PR、fork，以及在进群监工。
 
-靠你了，我什么都不会做的www
+靠你们了，我什么都不会做的www
