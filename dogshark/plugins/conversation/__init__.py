@@ -1,1 +1,1 @@
-from . import test
+from . import test, cat_pic

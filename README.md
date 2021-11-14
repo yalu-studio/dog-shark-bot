@@ -4,13 +4,18 @@
 
 总之，摸了。
 
-## 感谢
+## 开发文档
+
+主要是方便我自己看 qwq
 
 * [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) | 
     [doc](https://docs.go-cqhttp.org/)
 
 * [NoneBot2](https://github.com/nonebot/nonebot2) | 
     [doc](https://v2.nonebot.dev/)
+
+* [OpenCV](https://github.com/opencv/opencv) | 
+    [doc](https://docs.opencv.org/4.5.4/)
 
 
 ## 使用说明

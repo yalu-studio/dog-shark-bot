@@ -5,6 +5,8 @@ services:
     container_name: dogshark-bot
     ports:
       - "666:9999"
+    volumes:
+      - ./assets:/assets
 
   cq-http:
     image: silicer/go-cqhttp:latest
@@ -19,6 +21,6 @@ services:
       - ./configs/device.json:/data/device.json
       - ./data/go-cqhttp/data:/data/data
       - ./data/go-cqhttp/logs:/data/logs
-      - ./dogshark/images:/images
+      - ./assets:/assets
     
 
