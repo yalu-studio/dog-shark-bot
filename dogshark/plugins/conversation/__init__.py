@@ -1,1 +1,1 @@
-from . import test, cat_pic
+from . import test, cat_pic, schedule
