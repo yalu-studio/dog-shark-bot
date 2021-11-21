@@ -8,13 +8,12 @@ import numpy as np
 
 CAT_API_URL = 'https://api.thecatapi.com/v1/images/search'
 
-TEST_IMG_PATH = '/assets/images/cat-test.jpg'
 LUMU_IMG_PATH = '/assets/images/lumu.png'
 OUTPUT_IMG_PATH = '/assets/images/cat.png'
 DETECTOR_PATH = '/assets/catface_detector.xml'
 
-cat_request = on_command('来点猫图', to_me())
 
+cat_request = on_command('来点猫图', to_me(), block=True)
 @cat_request.handle()
 async def _(bot: Bot, event: MessageEvent):
     async with httpx.AsyncClient() as client:
@@ -30,17 +29,6 @@ async def _(bot: Bot, event: MessageEvent):
         msg = Message(f'[CQ:image,file=file://{OUTPUT_IMG_PATH}]')
         await cat_request.finish(msg)
 
-cat_test = on_command('测试猫图', to_me())
-
-@cat_test.handle()
-async def _(bot: Bot, event: MessageEvent):
-    cat = Image.open(TEST_IMG_PATH).convert('RGBA')
-    lumu = Image.open(LUMU_IMG_PATH).convert('RGBA')
-    make_meme(cat, lumu)
-    cat.save(OUTPUT_IMG_PATH)
-
-    msg = Message(f'[CQ:image,file=file://{OUTPUT_IMG_PATH}]')
-    await cat_test.finish(msg)
 
 def make_meme(cat: Image, lumu: Image):
     # Convert to greyscale

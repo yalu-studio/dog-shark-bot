@@ -6,8 +6,7 @@ from nonebot.adapters import Bot
 # TODO: Implement database
 schedule_stream = None
 
-get_current_stream = on_regex(r'^#查询.*直播计划$', rule=to_me())
-
+get_current_stream = on_regex(r'^#查询.*直播计划$', rule=to_me(), block=True)
 @get_current_stream.handle()
 async def _(bot: Bot, event: MessageEvent):
     # TODO: Check message source.
