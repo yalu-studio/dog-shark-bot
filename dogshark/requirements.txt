@@ -16,7 +16,7 @@ idna==3.3
 loguru==0.5.3
 nonebot-adapter-cqhttp==2.0.0a16
 nonebot2==2.0.0a16
-numpy==1.21.4
+numpy==1.22.0
 opencv-python-headless==4.5.3.56
 Pillow==8.4.0
 pydantic==1.8.2
